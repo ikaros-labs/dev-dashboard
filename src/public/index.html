@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Dev Dashboard</h1>
+    <div id="current-stats">
+      <span id="cpu-current">CPU: --</span>
+      <span id="mem-current">RAM: --</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="metrics-section">
+      <div class="section-header">
+        <h2>System Metrics</h2>
+        <div class="time-range">
+          <button data-minutes="15">15m</button>
+          <button data-minutes="60" class="active">1h</button>
+          <button data-minutes="360">6h</button>
+          <button data-minutes="1440">24h</button>
+        </div>
+      </div>
+      <div class="charts">
+        <div class="chart-container">
+          <h3>CPU Usage</h3>
+          <canvas id="cpu-chart" width="600" height="200"></canvas>
+        </div>
+        <div class="chart-container">
+          <h3>Memory Usage</h3>
+          <canvas id="mem-chart" width="600" height="200"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section id="services-section">
+      <h2>Applications</h2>
+      <div id="services-grid" class="card-grid"></div>
+    </section>
+
+    <section id="demos-section">
+      <h2>Active Demos</h2>
+      <div id="demos-list"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
