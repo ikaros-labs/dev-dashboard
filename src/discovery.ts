@@ -56,9 +56,8 @@ export interface ServiceLink {
 
 export function getServices(): ServiceLink[] {
   return [
+    { name: "Agents", url: `https://agents.${DOMAIN}`, icon: "bot" },
     { name: "Code Server", url: `https://code.${DOMAIN}`, icon: "code" },
     { name: "Terminal", url: `https://terminal.${DOMAIN}`, icon: "terminal" },
-    { name: "Agents", url: `https://agents.${DOMAIN}`, icon: "bot" },
-    { name: "Dashboard", url: `https://dashboard.${DOMAIN}`, icon: "dashboard" },
   ];
 }
